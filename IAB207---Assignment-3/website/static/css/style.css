@@ -1,0 +1,148 @@
+/* Variables */
+:root {
+    --main-light: #f6f6f6;
+    --main-dark: #333;
+    --highlight: slategray;
+}
+
+/* Whole doc styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation */
+.nav-link-custom {
+    font-size: 2rem;
+    transition: 200ms ease-in-out;
+    color: var(--main-dark);
+    cursor: pointer;
+
+}
+
+.nav-link-custom:hover {
+    font-size: 2rem;
+    transition: 200ms ease-in-out;
+    color: coral;
+    cursor: pointer;
+
+}
+
+
+
+.nav-link-custom-light {
+    font-size: 2rem;
+    transition: 200ms ease-in-out;
+    color: var(--main-light);
+    cursor: pointer;
+
+}
+
+.nav-link-custom-light:hover {
+    color: var(--highlight);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active,
+.nav-link-custom:hover {
+    color: var(--highlight);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main-nav {
+    border-bottom: #333 1px solid;
+}
+
+/* Showcase */
+#showcase {
+    background-image: url("/static/img/back.jpg");
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+    height: 30vh;
+}
+/* Events */
+.information {
+    font-size: 1.5rem;
+}
+
+
+
+/* Utility classes */
+.custom-bg-light {
+    background-color: var(--main-light);
+}
+
+/* Lists */
+.undecorated {
+    text-decoration: none;
+}
+
+ul .undecorated {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Shadow */
+.custom-shadow {
+    box-shadow: 20px 20px 50px 1px #030303;
+}
+
+/* Images */
+.rounded-custom {
+    border-radius: 50%;
+}
+
+/* Modal */
+.modal-backdrop {
+    z-index: -2;
+    background-color: transparent;
+}
+
+/* Height utility */
+.h10 {
+    min-height: 10vh;
+}
+
+.h20 {
+    min-height: 20vh;
+}
+
+.h30 {
+    min-height: 30vh;
+}
+
+.h40 {
+    min-height: 40vh;
+}
+
+.h50 {
+    min-height: 50vh;
+}
+
+.h60 {
+    min-height: 60vh;
+}
+
+.h70 {
+    min-height: 70vh;
+}
+
+.h80 {
+    min-height: 80vh;
+}
+
+.h90 {
+    min-height: 90vh;
+}
+
+.h100 {
+    min-height: 100vh;
+}

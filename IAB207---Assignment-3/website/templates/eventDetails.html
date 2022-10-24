@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+{% block content %}
+<!-- Content Section -->
+<section class="h60">
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="flashes list-group">
+        {% for category, message in messages %}
+        <li class="text-center list-group-item  {{category}}">
+            {{message}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <div class="row justify-content-center text-center">
+        <h2 class="eventTitle col-8 m-3">Basketball Beginners Session</h2>
+    </div>
+    <div class="row justify-content-center m-4">
+        <img src="/static/img/{{clickedEvent.imagePath}}" alt="Dice" class="img-fluid col-3 rounded-custom">
+    </div>
+    <div class="row justify-content-center text-center m-4 h10 w-75 mx-auto">
+        <ul class="list-group">
+            <li class="list-group-item information">Start time: <span class="startTime">04:00pm</span> - End
+                time: <span class="endTime">11:00pm</span></li>
+            <li class="list-group-item information">Date: <span class="dateOfEvent">03/06/2022</span></li>
+            <li class="list-group-item information">Price: $<span>10.00</span></li>
+            <li class="list-group-item information">10</span> out of <span class="totalSpaces">20</span>
+                Spaces Available</li>
+            <li class="list-group-item information">Location: 44 Fickle Ave, Woolloongabba, QLD</li>
+        </ul>
+
+        <div class="requirements lead text-left m-2 w-100">
+            <h3>Requirements</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="lead">Please bring the following:</div>
+                    <ul class="list-group-flush mb-4">
+                        <li class="list-group-item">- Note taking book</li>
+                        <li class="list-group-item">- Dice</li>
+                        <li class="list-group-item">- A character or character idea (and character sheet if you have
+                            it)</li>
+                        <li class="list-group-item">- A role playing attitude :)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="additional-info lead text-left m-2 w-100">
+            <h3>Additional Information</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="lead">
+                        If you've been looking to get into Basketball but don't know where to start, look
+                        no further! We'll spend the first hour going over how to create a character if you don't
+                        know how to already, if you do you're more than welcome to come a bit later. After that we
+                        have some pretty tame missions lined up for everyone, we'll split into groups of about 6-8
+                        so it isn't too overwhelming. If this sounds like something you'd be interested in, book a
+                        ticket and come along.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form method="POST" action='' enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            <div class="additional-info m-2 w-100">
+                <div class="row g-5 justify-content-center">
+                    {{form.amountTickets.label()}}
+                    {{form.amountTickets(class_="form-control")}}
+                    {{form.book(class_="btn btn-success")}}
+                    <button class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+</section>
+{% endblock %}
