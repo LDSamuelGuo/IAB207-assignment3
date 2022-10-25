@@ -19,10 +19,10 @@ def index():
     return render_template('index.html')
 
 
-@bp.route('/my_website')
+@bp.route('/my_bookings')
 @login_required
-def my_website():
-    return render_template('events/my_events.html', heading='My website', website=current_user.created_website)
+def my_bookings():
+    return render_template('events/my_events.html', heading='Booking History', website=current_user.created_website)
 
 
 @bp.route('/my_events')
