@@ -18,11 +18,11 @@ class EventStatus(Enum):
 
 
 class EventGenre(Enum):
-    Badminton = 1
-    Basketball = 2
-    Tennis = 3
-    Football = 4
-    Volleyball = 5
+    BADMINTON = 1
+    BASKETBALL = 2
+    TENNIS = 3
+    FOOTBALL = 4
+    VOLLEYBALL = 5
     OTHER = 6
 
 
