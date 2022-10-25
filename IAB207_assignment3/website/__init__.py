@@ -50,7 +50,7 @@ def create_app():
         Event.event_status != 'INACTIVE').all()
         genres = EventGenre
         cities = EventCity
-        return(dict(events_list=all_events,artist_list=dropdown_events,genres=genres,cities=cities,username=name,current_events=current_events))
+        return(dict(events_list=all_events,organiser_list=dropdown_events,genres=genres,cities=cities,username=name,current_events=current_events))
 
     @app.errorhandler(404)
     def not_found(e):  # error view function
