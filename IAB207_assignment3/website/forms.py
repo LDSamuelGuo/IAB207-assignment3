@@ -74,7 +74,7 @@ class CommentForm(FlaskForm):
 
 
 class BookingForm(FlaskForm):
-   amountTickets = IntegerField(
+   tickets_required = IntegerField(
         'How many tickets would you like to book?', default='1', validators=[InputRequired()])
 
     # def validate_tickets_required(form, field):
