@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 authbp = Blueprint('auth', __name__)
 
-# Checks if the current user is Anonymous or logged in
+# Check if the current user is Anonymous or logged in
 def is_current_user():
     if current_user.name == 'Guest':
         name = 'Guest'
