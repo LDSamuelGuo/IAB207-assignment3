@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/form.html" as wtf %}
+{% block title %}Something went wrong{% endblock %}
+
+{% block content %}
+<br>
+<div id="container-fluid">
+    <div class="col-10 col-lg-8 mx-auto">
+        <div class="div-2"></div>
+        <h1>Something went wrong</h1>
+        <h4>The server has encounted an error. A user adminster has been notified of the problem</h4>
+        <a href="{{ url_for('main.index') }}">Click here to return to homepage</a>
+        
+    </div>
+</div>
+{% endblock %}
